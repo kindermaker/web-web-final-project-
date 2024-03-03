@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>主页</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/nav.css">
+    <link rel="icon" href="images\deer.ico" type="image/x-icon">
+    <link rel="shortcut icon" href="images\deer.ico" type="image/x-icon">
+    <style>
+        .little {
+            position: relative;
+        }
+
+        .little img {
+            width: 50px;
+            height: 50px;
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .little img:hover {
+            transform: scale(1.2);
+        }
+
+        .little-1, .little-2, .little-3, .little-4, .little-5, .little-6, .little-7, .little-8, .little-9 {
+            position: absolute;
+        }
+
+        .little-1 { top: 215px; left: 0px; }
+        .little-2 { top: 145px; left: 170px; }
+        .little-3 { top: 90px; left: 320px; }
+        .little-4 { top: 45px; left: 480px; }
+        .little-5 { top: 20px; left: 670px; }
+        .little-6 { top: 30px; left: 860px; }
+        .little-7 { top: 60px; left: 1020px; }
+        .little-8 { top: 110px; left: 1200px; }
+        .little-9 { top: 190px; left: 1400px; }
+
+        .little a {
+            text-decoration: none;
+        }
+
+        .login-section {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        #loginButton {
+            color: white;
+            background-color: #3498db;
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+        .login-section {
+        text-align: center;
+        margin-top: 300px; /* Adjust the margin to move the button down */
+        margin-left: -70px;
+        overflow: auto;
+    }
+
+    #loginButton {
+        color: white;
+        background-color: #dae846;
+        padding: 10px 20px;
+        font-size: 16px;
+        cursor: pointer;
+    }
+    .text1{
+        color: rgb(0, 0, 0);
+        font-size: 30px;
+        font-family: 'Courier New', Courier, monospace;
+        margin-top: 200px;
+        margin-left: 600px;
+        overflow: visible;
+        margin-top: 100px;    /* Adjust the margin-top as needed */
+        margin-bottom: 20px;
+    }
+    .center-image {
+        position: absolute;
+        top: 50%;
+        left: 48%;
+        transform: translate(-50%, -50%);
+        border-radius: 50%;
+        transition: transform 0.6s ease-in-out, box-shadow 0.6s ease-in-out; /* 调整过渡时间为0.6秒 */
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+        width: 300px; /* 调整图片宽度 */
+        height: 300px; /* 调整图片高度 */
+    }
+
+    .center-image:hover {
+        transform: translate(-50%, -50%) scale(1.1) rotate(360deg); /* 鼠标悬停时放大和旋转 */
+        box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+    }
+    </style>
+</head>
+
+<body background="images\yellow2.png">
+
+    <div class="navbar">
+        <div class="nav">
+            <ul>
+                <li>
+                    <a href="home.html" style="color: rgb(0, 0, 0);">首页</a>
+                </li>
+                <li>
+                    <a href="" style="color: rgb(0, 0, 0);">番剧漫画</a>
+                    <ol>
+                        <li><a href="comic.html" style="color: rgb(0, 0, 0);">ACG</a></li>
+                    </ol>
+                </li>
+                <li>
+                    <a href="" style="color: rgb(0, 0, 0);">音乐推荐</a>
+                    <ol>
+                        <li><a href="English-music.html" style="color: rgb(0, 0, 0);">英文柔和风</a></li>
+                        <li><a href="Japan-music.html" style="color: rgb(0, 0, 0);">日系共鸣</a></li>
+                        <li><a href="Phonk-music.html" style="color: rgb(0, 0, 0);">Phonk</a></li>
+                    </ol>
+                </li>
+                <li>
+                    <a href="" style="color: rgb(0, 0, 0);">关于我</a>
+                    <ol>
+                        <li><a href="hobby.html" style="color: rgb(0, 0, 0);">个人爱好</a></li>
+                        <li><a href="collegeindt.html" style="color: rgb(0, 0, 0);">个人介绍</a></li>
+                    
+                    </ol>
+                </li>
+                <li>
+                    <a href="" style="color: rgb(0, 0, 0);">感悟心得</a>
+                    <ol>
+                        <li><a href="test.html" style="color: rgb(0, 0, 0);">网站概述</a></li>
+                    </ol>
+                </li>
+                <li>
+                    <a href="cover.html" style="color: rgb(0, 0, 0);">封面For Now</a>
+                </li>
+                <li class="underline"></li>
+            </ul>
+        </div>
+    </div>   
+    <div class="logo">
+        <img src="images\marrydeer.png" alt="Logo"  width="30"  height="30">
+    </div>
+    
+    <div class="little">
+        <div class="little-1">
+            <a href="your_link_1">
+                <img src="images\home-l.png" alt="1">
+            </a>
+        </div>
+        <div class="little-2">
+            <a href="your_link_2">
+                <img src="images\comic-2.png" alt="2">
+            </a>
+        </div>
+        <div class="little-3">
+            <a href="your_link_3">
+                <img src="images\music-1.png" alt="3">
+            </a>
+        </div>
+        <div class="little-4">
+            <a href="your_link_4">
+                <img src="images\music-2.png" alt="4">
+            </a>
+        </div>
+        <div class="little-5">
+            <a href="your_link_5">
+                <img src="images\music-3.png" alt="5">
+            </a>
+        </div>
+        <div class="little-6">
+            <a href="your_link_6">
+                <img src="images\hobby-1.png" alt="6">
+            </a>
+        </div>
+        <div class="little-7">
+            <a href="your_link_7">
+                <img src="images\web-1.png" alt="7">
+            </a>
+        </div>
+        <div class="little-8">
+            <a href="your_link_8">
+                <img src="images\thinking-1.png" alt="8">
+            </a>
+        </div>
+        <div class="little-9">
+            <a href="your_link_9">
+                <img src="images\tour-1.png" alt="9">
+            </a>
+        </div>
+    </div>
+    <br>
+    <div class="text1">
+        <p>欢迎来到本网站</p>
+    </div>
+    <br> <br> 
+    <!-- Login Button Section -->
+    <div class="login-section">
+        <a href="regist.html" style="text-decoration: none;">
+            <button id="loginButton" style="color: white; background-color: #d1da6f; padding: 10px 20px; font-size: 16px; cursor: pointer;">登录</button>
+        </a>
+    </div>
+    <div class="profile-picture">
+        <a href="https://space.bilibili.com/356327544?spm_id_from=333.1007.0.0" style="color: white;"><img src="images\MU9)JFGOYF@@M2EMVB7DZ{6.png" alt="Profile Picture" style="width: 100%; height: 100%;"></a>
+    </div>
+    <img src="images\th (2).jpg" alt="Center Image" class="center-image">
+    
+    <div align="right" style="margin-top: -60px;"> <!-- 调整上边距为负值，向上移动 -->
+        <button class="button" onclick="refreshPage()">
+            <img src="images\refesh.png" alt="Custom Icon">
+            <span>刷新</span>
+        </button>
+    </div>
+    <br><br>
+    <div align="right" style="margin-top: -50px;"> <!-- 调整上边距为负值，向上移动 -->
+        <button class="button">
+            <img src="G:\web期末\images\worker.png" alt="Custom Icon">
+            <span>客服</span>
+        </button>
+    </div>
+    <br><br>
+    <div align="right" style="margin-top: -40px;"> <!-- 调整上边距为负值，向上移动 -->
+        <button class="button">
+            <img src="images\more.png" alt="Custom Icon">
+            <span>更多</span>
+        </button>
+    </div>
+    
+</body>
+
+<script>
+    // 刷新页面的 JavaScript 函数
+    function refreshPage() {
+        location.reload(); // 刷新页面
+    }
+    </script>
+</html>

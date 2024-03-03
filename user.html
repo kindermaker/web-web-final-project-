@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    
+    <title>Login Page</title>
+</head>
+<style>
+    body {
+
+        font-family: 'Arial', sans-serif;
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        height: 100vh;
+        margin: 0;
+        background: linear-gradient(to bottom, #3498db 25%, #e74c3c 25%, #e74c3c 100%);
+    }
+
+    .login-container {
+        background-color: #fff;
+        padding: 20px;
+        border-radius: 8px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        text-align: center;
+        margin-right: 100px;
+    }
+    
+    h2 {
+        color: #333;
+        margin-bottom: 20px; /* 添加底部边距 */
+        font-size: 24px;
+        text-shadow: 0 0 10px rgba(255, 255, 255, 0.8); /* 添加文字发光效果 */
+    }
+    
+    form {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    label {
+        margin: 10px 0;
+    }
+    
+    input {
+        padding: 10px;
+        margin-bottom: 15px;
+        width: 100%;
+        box-sizing: border-box;
+    }
+    
+    button {
+        background-color: #3498db;
+        color: #fff;
+        padding: 10px 20px;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+        transition: transform 0.3s, box-shadow 0.3s; /* 添加过渡效果 */
+    }
+    
+    button:hover {
+        background-color: #2980b9;
+        transform: scale(1.1); /* 鼠标悬停时稍微放大按钮 */
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2); /* 悬停时放大阴影效果，可以根据需要调整阴影的大小和颜色 */
+    }
+    
+    /* 添加 "请登录" 文字 */
+    .login-text {
+        position: absolute;
+        top: 10%;
+        left: 50%;
+        transform: translateX(-50%);
+        font-size: 28px;
+        color: #fff;
+        text-shadow: 0 0 20px rgba(255, 255, 255, 0.8); /* 添加文字发光效果 */
+    }
+    
+    /* 添加圆形图片 */
+    .profile-picture {
+        width: 400px;
+        height: 400px;
+        border-radius: 50%;
+        overflow: hidden;
+        position: absolute;
+        top: 55%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+        transition: transform 0.3s, box-shadow 0.3s; /* 添加过渡效果 */
+        }
+        .profile-picture img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        filter: blur(2px); /* 模糊效果 */
+    }
+        .profile-picture:hover {
+            transform: translate(-50%, -50%) scale(1.1) rotate(360deg); /* 鼠标悬停时放大和旋转 */
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+        }
+        .sidenav-btn {
+        font-size: 30px;
+        cursor: pointer;
+        position: fixed;
+        z-index: 1;
+        left: 250px; /* 调整这里的数值 */
+        top: 10px;
+    }
+    
+    
+    /* 响应式侧边栏样式 */
+    /* 响应式侧边栏样式 */
+    .sidenav {
+        height: 100%;
+        width: 0;
+        position: fixed;
+        z-index: 1;
+        top: 0;
+        left: 0;
+        background-color: #111;
+        overflow-x: hidden;
+        transition: 0.5s;
+        padding-top: 60px;
+    }
+    
+    .sidenav a {
+        padding: 8px 8px 8px 32px;
+        text-decoration: none;
+        font-size: 18px;
+        color: #818181;
+        display: block;
+        transition: 0.3s;
+    }
+    
+    .sidenav a:hover {
+        color: #f1f1f1;
+    }
+    
+    .sidenav-btn + .sidenav {
+        width: 0;
+    }
+    
+    .sidenav-btn:hover + .sidenav {
+        width: 250px;
+    }
+    
+    /* 在小屏幕上隐藏侧边栏按钮 */
+    @media screen and (max-width: 600px) {
+        .sidenav-btn {
+            display: none;
+        }
+    
+        /* 在小屏幕上显示侧边栏 */
+        .sidenav {
+            width: 250px;
+        }
+    }
+    
+    </style>
+<body>
+    <div class="sidenav-btn" id="sidenav-btn" onclick="toggleSidenav()">&#9776;</div>
+
+    <!-- 响应式侧边栏 -->
+    <div class="sidenav" id="sidenav">
+        <a href="#">首页</a>
+        <a href="#">动漫</a>
+        <a href="#">音乐</a>
+        <a href="#">介绍</a>
+        <a href="#">封面</a>
+    </div>
+
+    <div class="login-text">请登录</div>
+    <div class="profile-picture">
+        <img src="images\QQ图片20231206232458.png" alt="Profile Picture">
+    </div>
+
+    <div class="login-container">
+        <h2>Login</h2>
+        <form id="loginForm" action="#" method="post">
+            <label for="username">Username:</label>
+            <input type="text" id="username" name="username" required>
+
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" required>
+
+            <button type="submit">Login</button>
+        </form>
+    </div>
+
+    <script>
+       document.addEventListener("DOMContentLoaded", function () {
+    var sidenav = document.querySelector(".sidenav");
+    var sidenavBtn = document.querySelector(".sidenav-btn");
+
+    sidenavBtn.addEventListener("mouseenter", function () {
+        sidenav.style.width = "250px";
+    });
+
+    sidenav.addEventListener("mouseleave", function () {
+        sidenav.style.width = "0";
+    });
+});
+
+    </script>
+</body>
+</html>

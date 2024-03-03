@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>下单页面</title>
+  <!-- 引入 Bootstrap 样式表 -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  <style>
+    .error {
+      color: red;
+    }
+  </style>
+  <script>
+    // Data for Chinese provinces, cities, and districts
+    var provinces = ["北京", "上海", "天津", "重庆", "广东", "江苏", "浙江", "福建", "湖南", "湖北"];
+    var cities = {
+      "北京": ["北京市"],
+      "上海": ["上海市"],
+      "天津": ["天津市"],
+      "重庆": ["重庆市"],
+      "广东": ["广州市", "深圳市", "珠海市", "汕头市"],
+      "江苏": ["南京市", "苏州市", "无锡市", "常州市"],
+      "浙江": ["杭州市", "宁波市", "温州市", "嘉兴市"],
+      "福建": ["福州市", "厦门市", "泉州市", "漳州市"],
+      "湖南": ["长沙市", "株洲市", "湘潭市", "衡阳市"],
+      "湖北": ["武汉市", "黄石市", "宜昌市", "荆州市"]
+    };
+    var districts = {
+      "北京市": ["东城区", "西城区", "朝阳区", "海淀区"],
+      "上海市": ["黄浦区", "徐汇区", "静安区", "杨浦区"],
+      "天津市": ["和平区", "河东区", "河西区", "南开区"],
+      "重庆市": ["渝中区", "江北区", "沙坪坝区", "九龙坡区"],
+      "广州市": ["越秀区", "荔湾区", "天河区", "海珠区"],
+      "南京市": ["玄武区", "秦淮区", "建邺区", "鼓楼区"],
+      "苏州市": ["姑苏区", "相城区", "吴中区", "虎丘区"],
+      "无锡市": ["崇安区", "南长区", "北塘区", "锡山区"],
+      "常州市": ["天宁区", "钟楼区", "戚墅堰区", "新北区"],
+      "杭州市": ["上城区", "下城区", "江干区", "拱墅区"],
+      "宁波市": ["海曙区", "江东区", "江北区", "镇海区"],
+      "温州市": ["鹿城区", "龙湾区", "瓯海区", "洞头区"],
+      "嘉兴市": ["南湖区", "秀洲区", "嘉善县", "海盐县"],
+      "福州市": ["鼓楼区", "台江区", "仓山区", "马尾区"],
+      "厦门市": ["思明区", "海沧区", "湖里区", "集美区"],
+      "泉州市": ["鲤城区", "丰泽区", "洛江区", "泉港区"],
+      "漳州市": ["芗城区", "龙文区", "龙海市", "平和县"],
+      "长沙市": ["芙蓉区", "天心区", "岳麓区", "开福区"],
+      "株洲市": ["天元区", "荷塘区", "芦淞区", "石峰区"],
+      "湘潭市": ["雨湖区", "岳塘区", "湘乡市", "韶山市"],
+      "衡阳市": ["雁峰区", "珠晖区", "石鼓区", "蒸湘区"],
+      "武汉市": ["江岸区", "江汉区", "硚口区", "汉阳区"],
+      "黄石市": ["黄石港区", "西塞山区", "下陆区", "铁山区"],
+      "宜昌市": ["西陵区", "伍家岗区", "点军区", "猇亭区"],
+      "荆州市": ["沙市区", "荆州区", "公安县", "监利县"]
+    }
+
+    function populateCities() {
+      var provinceDropdown = document.getElementById('province');
+      var cityDropdown = document.getElementById('city');
+      var districtDropdown = document.getElementById('district');
+
+      var selectedProvince = provinceDropdown.value;
+      var selectedCities = cities[selectedProvince];
+
+      // Populate cities dropdown using Bootstrap classes
+      cityDropdown.innerHTML = '<option value="">选择城市</option>';
+      for (var i = 0; i < selectedCities.length; i++) {
+        cityDropdown.innerHTML += '<option value="' + selectedCities[i] + '">' + selectedCities[i] + '</option>';
+      }
+
+      // Populate districts dropdown (you can customize this based on your data)
+      districtDropdown.innerHTML = '<option value="">选择地区</option>';
+      if (selectedCities.length > 0) {
+        var selectedDistricts = districts[selectedCities[0]];
+        for (var j = 0; j < selectedDistricts.length; j++) {
+          districtDropdown.innerHTML += '<option value="' + selectedDistricts[j] + '">' + selectedDistricts[j] + '</option>';
+        }
+      }
+    }
+
+    function validateForm() {
+      var address = document.getElementById('address').value;
+      var recipient = document.getElementById('recipient').value;
+      var phoneNumber = document.getElementById('phoneNumber').value;
+      var province = document.getElementById('province').value;
+      var city = document.getElementById('city').value;
+      var district = document.getElementById('district').value;
+      var detailAddress = document.getElementById('detailAddress').value;
+      var paymentMethod = document.getElementById('paymentMethod').value;
+
+      if (address === '' || recipient === '' || phoneNumber === '' || province === '' || city === '' || district === '' || detailAddress === '' || paymentMethod === '') {
+        alert('请填写所有必填字段！');
+        return false;
+      }
+
+      // Other validation logic...
+
+      return true;
+    }
+  </script>
+</head>
+
+<body class="bg-light">
+
+  <div class="container mt-5">
+    <form onsubmit="return validateForm()" class="mx-auto bg-white p-4 rounded shadow" style="max-width: 400px;">
+
+      <div class="form-group">
+        <label for="address">收货地址（填写UID即可）：</label>
+        <input type="text" id="address" name="address" required class="form-control">
+      </div>
+
+      <div class="form-group">
+        <label for="recipient">收件人：</label>
+        <input type="text" id="recipient" name="recipient" required class="form-control">
+      </div>
+
+      <div class="form-group">
+        <label for="phoneNumber">手机号码：</label>
+        <input type="tel" id="phoneNumber" name="phoneNumber" required class="form-control">
+      </div>
+
+      <div class="form-group">
+        <label for="province">省份：</label>
+        <select id="province" name="province" onchange="populateCities()" required class="form-control">
+          <option value="">选择省份</option>
+          <!-- Add provinces dynamically -->
+          <script>
+            for (var i = 0; i < provinces.length; i++) {
+              document.write('<option value="' + provinces[i] + '">' + provinces[i] + '</option>');
+            }
+          </script>
+        </select>
+      </div>
+
+      <div class="form-group">
+        <label for="city">城市：</label>
+        <select id="city" name="city" required class="form-control">
+          <option value="">选择城市</option>
+          <!-- Dynamically populated based on user selection -->
+        </select>
+      </div>
+
+      <div class="form-group">
+        <label for="district">地区：</label>
+        <select id="district" name="district" required class="form-control">
+          <option value="">选择地区</option>
+          <!-- Dynamically populated based on user selection -->
+        </select>
+      </div>
+
+      <div class="form-group">
+        <label for="detailAddress">详细地址：</label>
+        <input type="text" id="detailAddress" name="detailAddress" required class="form-control">
+      </div>
+
+      <div class="form-group">
+        <label for="paymentMethod">支付方式：</label>
+        <select id="paymentMethod" name="paymentMethod" required class="form-control">
+          <option value="">选择支付方式</option>
+          <option value="alipay">支付宝支付</option>
+          <option value="wechat">微信支付</option>
+          <option value="creditCard">信用卡支付</option>
+        </select>
+      </div>
+
+      <div class="form-group form-check">
+        <input type="checkbox" id="defaultAddress" name="defaultAddress" class="form-check-input">
+        <label class="form-check-label" for="defaultAddress">设为默认收货地址</label>
+      </div>
+
+      <button type="submit" class="btn btn-primary">下单</button>
+
+    </form>
+  </div>
+
+  <!-- 引入 Bootstrap JavaScript 脚本 -->
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+
+</body>
+
+</html>

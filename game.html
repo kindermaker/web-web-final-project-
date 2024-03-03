@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>主页</title>
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/nav.css">
+    <link rel="icon" href="images\deer.ico" type="image/x-icon">
+    <link rel="shortcut icon" href="images\deer.ico" type="image/x-icon">
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+  <!-- Other head elements -->
+
+    <!-- Include jQuery -->
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+</head>
+<style>
+    .anime-series {
+  background-color: rgba(169, 169, 169, 0.8); /* 灰色背景，不透明度50% */
+  border-radius: 12px; /* 圆角矩形，根据需要调整半径 */
+  padding: 5px; /* 可根据需要调整内边距 */
+}
+.anime-series img {
+    width: 400px; /* 设置图片的宽度 */
+    height: 220px; /* 设置图片的高度 */
+    object-fit: cover; /* 保持图片比例，裁剪超出部分 */
+  }
+
+.anime-series h3, .anime-series p {
+  margin: 0; /* 去除默认的外边距 */
+}
+
+#content {
+  margin-left: 20px; /* 你可以根据需要调整左边距的大小 */
+}
+
+    /* 添加一个新的类，用于创建两列布局 */
+.anime-container {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+/* 设置每个动漫系列的宽度，使其占用一半宽度 */
+.anime-series {
+  width: 50%;
+  box-sizing: border-box; /* 防止边框和填充增加元素的实际宽度 */
+  padding: 20px; /* 添加一些填充，增加间距 */
+}
+
+/* 根据需要调整其他样式，确保两列布局的整齐性 */
+.anime-series a {
+  text-decoration: none;
+}
+
+.anime-series h3 {
+  font-size: 3em;
+}
+
+.anime-series p {
+  margin: 0;
+}
+/* 添加一个新的类，用于创建两列布局 */
+.anime-container {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+/* 设置每个动漫系列的宽度，使其占用一半宽度 */
+.anime-series {
+  width: calc(50% - 20px); /* 50% 宽度减去间隙 */
+  box-sizing: border-box; /* 防止边框和填充增加元素的实际宽度 */
+  padding: 20px; /* 添加一些填充，增加间距 */
+  margin: 10px; /* 添加 margin 来实现间隙 */
+  background-color: #cbc9c9; /* 灰色背景 */
+}
+
+/* 根据需要调整其他样式，确保两列布局的整齐性 */
+.anime-series a {
+  text-decoration: none;
+}
+
+.anime-series h3 {
+  font-size: 2em;
+}
+
+.anime-series p {
+  margin: 0;
+  color: #2b2a2a;
+}
+
+ #stripedTable {
+        margin: 0 auto; /* Set left and right margins to 'auto' to center the table */
+        width: 60%; /* Set the desired width of the table */
+        border-collapse: collapse; /* Collapse table borders */
+    }
+
+    th, td {
+        border: 1px solid #ddd; /* Add border to cells for better visibility */
+        padding: 8px; /* Add padding to cells */
+        text-align: left; /* Align text to the left within cells */
+    }
+
+    th {
+        background-color: #f2f2f2; /* Set background color for header cells */
+    }
+
+    tbody tr:nth-child(odd) {
+        background-color: #f9f9f9; /* Set background color for odd rows */
+    }
+    button {
+    padding: 10px 15px;
+    background-color: #5ac7dc; /* Green */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 10px;
+  }
+
+  /* Style for the select elements */
+  select {
+    padding: 8px;
+    border-radius: 5px;
+    margin-right: 10px;
+  }
+
+  /* Additional styling for better alignment */
+  label {
+    margin-right: 10px;
+  }
+
+  /* Optional hover effect for the buttons */
+ 
+</style>
+<body background="images\black_00000.png">
+
+    <div class="navbar">
+        <div class="nav">
+            <ul>
+                <li>
+                    <a href="home.html" style="color: rgb(0, 0, 0);">首页</a>
+                </li>
+                <li>
+                    <a href="" style="color: rgb(0, 0, 0);">番剧漫画</a>
+                    <ol>
+                        <li><a href="comic.html" style="color: rgb(0, 0, 0);">ACG</a></li>
+                    </ol>
+                </li>
+                <li>
+                    <a href="" style="color: rgb(0, 0, 0);">音乐推荐</a>
+                    <ol>
+                        <li><a href="English-music.html" style="color: rgb(0, 0, 0);">英文柔和风</a></li>
+                        <li><a href="Japan-music.html" style="color: rgb(0, 0, 0);">日系共鸣</a></li>
+                        <li><a href="Phonk-music.html" style="color: rgb(0, 0, 0);">Phonk</a></li>
+                    </ol>
+                </li>
+                <li>
+                    <a href="" style="color: rgb(0, 0, 0);">关于我</a>
+                    <ol>
+                        <li><a href="hobby.html" style="color: rgb(0, 0, 0);">个人爱好</a></li>
+                        <li><a href="collegeindt.html" style="color: rgb(0, 0, 0);">个人介绍</a></li>
+                    
+                    </ol>
+                </li>
+                <li>
+                    <a href="" style="color: rgb(0, 0, 0);">感悟心得</a>
+                    <ol>
+						<li><a href="test.html" style="color: rgb(0, 0, 0);">网站概述</a></li>
+                    </ol>
+                </li>
+                <li>
+                    <a href="cover.html" style="color: rgb(0, 0, 0);">回到封面</a>
+                </li>
+                <!-- 这个元素来定义滑动的线条 -->
+                <li class="underline"></li>
+            </ul>
+        </div>
+    </div>
+    <div class="logo">
+        <img src="images\marrydeer.png" alt="Logo"  width="30"  height="30">
+    </div>
+     <!-- 添加圆形图片 -->
+     <div class="profile-picture">
+        <a href="https://space.bilibili.com/356327544?spm_id_from=333.1007.0.0" style="color: white;"><img src="images\MU9)JFGOYF@@M2EMVB7DZ{6.png" alt="Profile Picture" style="width: 120%; height: 120%;"></a>
+    </div>
+    <br><br>
+    <!-- 在导航栏下方添加搜索框 -->
+<div class="search-box">
+  <a href="comic.html">
+    <button style="border-radius: 12px;">
+        <img src="images\acfun.png">
+        <span>番剧</span>
+    </button>
+    </a>
+    <button>
+        <img src="images\live.png">
+        <span>直播</span>
+    </button>
+    <button>
+        <img src="images\game.png">
+        <span>游戏</span>
+    </button>
+    <button>
+        <img src="images\gaming.png">
+        <span>赛事</span>
+    </button>
+    <button>
+        <img src="images\music.png">
+        <span>音乐</span>
+    </button>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    <input type="text" placeholder="搜索...">
+    <button type="submit">
+        <img src="images\search.png">
+        <span>搜索</span>
+    </button>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    <button>
+        <img src="images\message.png">
+        <span>消息</span>
+    </button>
+    <button>
+        <img src="images\moving.png">
+        <span>动态</span>
+    </button>
+    <button>
+        <img src="images\history.png">
+        <span>历史</span>
+    </button>
+    <button>
+        <img src="images\trare.png">
+        <span>收藏</span>
+    </button>
+    <a href="vip.html"><button style="background-color: pink;">
+        <img src="images\download.png">
+        <span>资源Download</span>
+    </button></a>
+</div>
+    <!-- 添加更多动漫系列的块，复制上面的结构并修改图片链接、标题和介绍 -->
+  </div>
+    <!-- Add this inside the <body> tag -->
+      <div id="first">游戏描述1...
+        <div class="anime-series">
+          <div class="game-content">
+              <!-- 游戏1的图片和文字 -->
+              <img src="images\ELDEN RING™ 2023_12_7 13_16_11.png" alt="Game 1">
+              <h3>ELDEN RING</h3>
+              <p align="right">游戏描述1...</p>
+          </div>
+      </div>
+  
+      </div>
+      <div id="second">游戏描述1...
+        <div class="anime-series">
+          <div class="game-content">
+            <!-- 游戏1的图片和文字 -->
+            <img src="images\极限竞速：地平线 4 2023_11_24 21_59_09.png" alt="Game 1">
+            <h3>极限竞速：地平线 4</h3>
+            <p>游戏描述1...</p>
+        </div>
+        </div>
+      </div>
+      <div id="third">游戏描述1...
+        <div class="anime-series">
+          <div class="game-content">
+            <!-- 游戏1的图片和文字 -->
+            <img src="images\image2.png" alt="Game 1">
+            <h3>荒野大镖客：救赎二</h3>
+            <p>游戏描述1...</p>
+        </div>
+        </div>
+      </div>
+      <div id="fourth">游戏描述1...
+        <div class="anime-series">
+          <div class="game-content">
+            <!-- 游戏1的图片和文字 -->
+            <img src="images\Devil May Cry 5 2023_11_27 18_01_51.png" alt="Game 1">
+            <h3>Devil May Cry 5</h3>
+            <p>游戏描述1...</p>
+        </div>
+        </div>
+      </div>
+      <div id="fifth">Fifth Body</div>
+    
+      <div>
+        <p>选择操作：</p>
+        
+        <!-- 更改背景颜色的部分 -->
+        <label for="rowSelector">选择行：</label>
+        <select id="rowSelector">
+          <option value="first">First</option>
+          <option value="second">Second</option>
+          <option value="third">Third</option>
+          <option value="fourth">Fourth</option>
+          <option value="fifth">Fifth</option>
+        </select>
+    
+        <label for="colorSelector">选择颜色：</label>
+        <select id="colorSelector">
+          <option value="lightblue">Light Blue</option>
+          <option value="lightgreen">Light Green</option>
+          <option value="lightcoral">Light Coral</option>
+        </select>
+    
+        <button onclick="changeColor()">更改背景颜色</button>
+    
+        <!-- 删除文本内容的部分 -->
+        <label for="deleteSelector">选择行：</label>
+        <select id="deleteSelector">
+          <option value="first">First</option>
+          <option value="second">Second</option>
+          <option value="third">Third</option>
+          <option value="fourth">Fourth</option>
+          <option value="fifth">Fifth</option>
+        </select>
+    
+        <button onclick="deleteText()">删除文本内容</button>
+      </div>
+    
+      <script>
+        // 给每个 div 元素添加点击事件
+        $('div[id]').click(function() {
+          // 移除所有元素的选中状态
+          $('div[id]').removeClass('selected');
+          
+          // 给点击的元素添加选中状态
+          $(this).addClass('selected');
+        });
+    
+        // 更改背景颜色的函数
+        function changeColor() {
+          var selectedRow = $('#rowSelector').val();
+          var selectedColor = $('#colorSelector').val();
+    
+          $('#' + selectedRow).css('background-color', selectedColor);
+        }
+    
+        // 删除文本内容的函数
+        function deleteText() {
+          var selectedRow = $('#deleteSelector').val();
+          $('#' + selectedRow).text('');
+        }
+      </script>
+    
+ 
+       <div align="right">
+         <button class="button" onclick="refreshPage()">
+            <img src="images\refesh.png" alt="Custom Icon">
+            <span>刷新</span>
+        </button>
+    </div>
+    <br>
+    <div align="right">
+        <button class="button">
+            <img src="G:\web期末\images\worker.png" alt="Custom Icon">
+            <span>客服</span>
+        </button>
+    </div>
+    <br>
+        <div align="right">
+        <button class="button">
+            <img src="images\more.png" alt="Custom Icon">
+            <span>更多</span>
+        </button>
+    </div>
+   
+
+</body>
+</html>

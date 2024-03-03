@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>用户注册</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            font-family: "Arial", sans-serif;
+            background-color: #f2f2f2;
+            margin: 0;
+            padding: 0;
+        }
+
+        .registration-container {
+            max-width: 600px;
+            margin: 50px auto;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+
+        table {
+            width: 100%;
+            margin-top: 20px;
+        }
+
+        td {
+            padding: 10px;
+        }
+
+        input,
+        textarea,
+        select {
+            width: calc(100% - 16px);
+            padding: 8px;
+            box-sizing: border-box;
+            margin-top: 5px;
+        }
+
+        button {
+            background-color: #d79c44;
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #45a049;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        /* 调整 radio 和 checkbox 的对齐 */
+        input[type="radio"],
+        input[type="checkbox"] {
+            vertical-align: middle;
+            margin-top: 0;
+        }
+        
+    </style>
+</head>
+
+<body>
+    <div class="registration-container">
+        <h1>用户注册</h1>
+        <form action="#" method="post" onsubmit="register(); return false;">
+            <table>
+                <tr>
+                    <td>用户名:</td>
+                    <td><input type="text" name="username" required></td>
+                </tr>
+                <tr>
+                    <td>密码:</td>
+                    <td><input type="password" name="password" required></td>
+                </tr>
+                <tr>
+                    <td>手机号:</td>
+                    <td><input type="tel" name="phone" required></td>
+                </tr>
+                <tr>
+                    <td>邮箱:</td>
+                    <td><input type="email" name="email" required></td>
+                </tr>
+                <tr>
+                    <td>性别:</td>
+                    <td>
+                        <label><input type="radio" name="gender" value="male"> 男</label>
+                        <label><input type="radio" name="gender" value="female"> 女</label>
+                    </td>
+                </tr>
+                <tr>
+                    <td>爱好:</td>
+                    <td>
+                        <label><input type="checkbox" name="hobbies" value="reading"> 阅读</label>
+                        <label><input type="checkbox" name="hobbies" value="music"> 音乐</label>
+                        <label><input type="checkbox" name="hobbies" value="sports"> 运动</label>
+                    </td>
+                </tr>
+                <tr>
+                    <td>籍贯:</td>
+                    <td>
+                        <select name="birthplace">
+                            <option value="beijing">北京</option>
+                            <option value="shanghai">上海</option>
+                            <option value="guangzhou">广州</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td>自我介绍:</td>
+                    <td><textarea name="introduction" rows="4" cols="50"></textarea></td>
+                </tr>
+                <tr>
+                    <td colspan="2">
+                        <label><input type="checkbox" name="agree" required> 同意本协议条款</label>
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="2">
+                        <button type="submit">注册</button>
+                    </td>
+                </tr>
+            </table>
+        </form>
+    </div>
+
+    <script>
+        function register() {
+            var username = document.getElementsByName("username")[0].value;
+            var password = document.getElementsByName("password")[0].value;
+            var phone = document.getElementsByName("phone")[0].value;
+            var email = document.getElementsByName("email")[0].value;
+            var gender = document.querySelector('input[name="gender"]:checked');
+            var hobbies = document.querySelectorAll('input[name="hobbies"]:checked');
+            var nativePlace = document.getElementsByName("birthplace")[0].value;
+            var introduction = document.getElementsByName("introduction")[0].value;
+            var agree = document.getElementsByName("agree")[0].checked;
+
+            // Add your form validation logic here
+
+            if (agree) {
+                // You can send data to the server for registration here
+
+                // Redirect to home.html on successful registration
+                window.location.href = "home.html";
+            } else {
+                alert("请同意协议条款");
+            }
+        }
+    </script>
+</body>
+
+</html>

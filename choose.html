@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>jQuery选择器示例</title>
+  <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+  <style>
+    /* 初始背景颜色 */
+    .selected {
+      background-color: yellow;
+    }
+  </style>
+</head>
+<body>
+
+  <div id="first">First Title</div>
+  <div id="second">Second Body</div>
+  <div id="third">Third Body</div>
+  <div id="fourth">Fourth Body</div>
+  <div id="fifth">Fifth Body</div>
+
+  <div>
+    <p>选择操作：</p>
+    
+    <!-- 更改背景颜色的部分 -->
+    <label for="rowSelector">选择行：</label>
+    <select id="rowSelector">
+      <option value="first">First</option>
+      <option value="second">Second</option>
+      <option value="third">Third</option>
+      <option value="fourth">Fourth</option>
+      <option value="fifth">Fifth</option>
+    </select>
+
+    <label for="colorSelector">选择颜色：</label>
+    <select id="colorSelector">
+      <option value="lightblue">Light Blue</option>
+      <option value="lightgreen">Light Green</option>
+      <option value="lightcoral">Light Coral</option>
+    </select>
+
+    <button onclick="changeColor()">更改背景颜色</button>
+
+    <!-- 删除文本内容的部分 -->
+    <label for="deleteSelector">选择行：</label>
+    <select id="deleteSelector">
+      <option value="first">First</option>
+      <option value="second">Second</option>
+      <option value="third">Third</option>
+      <option value="fourth">Fourth</option>
+      <option value="fifth">Fifth</option>
+    </select>
+
+    <button onclick="deleteText()">删除文本内容</button>
+  </div>
+
+  <script>
+    // 给每个 div 元素添加点击事件
+    $('div[id]').click(function() {
+      // 移除所有元素的选中状态
+      $('div[id]').removeClass('selected');
+      
+      // 给点击的元素添加选中状态
+      $(this).addClass('selected');
+    });
+
+    // 更改背景颜色的函数
+    function changeColor() {
+      var selectedRow = $('#rowSelector').val();
+      var selectedColor = $('#colorSelector').val();
+
+      $('#' + selectedRow).css('background-color', selectedColor);
+    }
+
+    // 删除文本内容的函数
+    function deleteText() {
+      var selectedRow = $('#deleteSelector').val();
+      $('#' + selectedRow).text('');
+    }
+  </script>
+
+</body>
+</html>

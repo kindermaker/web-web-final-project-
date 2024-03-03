@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ajax 异步访问实践</title>
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    <style>
+        /* Add your styles here */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+        }
+
+        #content {
+            max-width: 800px;
+            margin: 50px auto;
+            padding: 20px;
+            background-color: #fff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        button {
+            padding: 10px;
+            background-color: #4caf50;
+            color: #fff;
+            border: none;
+            cursor: pointer;
+        }
+
+        #result {
+            margin-top: 20px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div id="content">
+        <h2>Ajax 异步访问实践</h2>
+        <button onclick="fetchData()">获取数据</button>
+        <div id="result"></div>
+    </div>
+
+    <script>
+        function fetchData() {
+            // 使用 jQuery 的 Ajax 方法发送 GET 请求
+            $.ajax({
+                url: 'https://jsonplaceholder.typicode.com/todos/1', // 替换成你的数据源
+                method: 'GET',
+                success: function (data) {
+                    // 请求成功时的处理
+                    displayData(data);
+                },
+                error: function (xhr, status, error) {
+                    // 请求发生错误时的处理
+                    console.error('Ajax request failed:', status, error);
+                }
+            });
+        }
+
+        function displayData(data) {
+            // 显示获取到的数据
+            var resultElement = $('#result');
+            resultElement.html('<h3>获取到的数据：</h3><pre>' + JSON.stringify(data, null, 2) + '</pre>');
+        }
+    </script>
+
+</body>
+
+</html>

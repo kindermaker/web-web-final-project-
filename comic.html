@@ -1,0 +1,455 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>主页</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/nav.css">
+    <link rel="icon" href="images\deer.ico" type="image/x-icon">
+    <link rel="shortcut icon" href="images\deer.ico" type="image/x-icon">
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" 
+    integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+<link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+
+</head>
+<style>
+    .anime-series {
+  background-color: rgba(169, 169, 169, 1); /* 灰色背景，不透明度50% */
+  border-radius: 12px; /* 圆角矩形，根据需要调整半径 */
+  padding: 5px; /* 可根据需要调整内边距 */
+}
+.anime-series img {
+    width: 400px; /* 设置图片的宽度 */
+    height: 220px; /* 设置图片的高度 */
+    object-fit: cover; /* 保持图片比例，裁剪超出部分 */
+  }
+
+.anime-series h3, .anime-series p {
+  margin: 0; /* 去除默认的外边距 */
+}
+
+#content {
+  margin-left: 20px; /* 你可以根据需要调整左边距的大小 */
+}
+
+.anime-series h3:hover {
+  animation: bounce 0.8s ease;
+}
+
+    /* 添加一个新的类，用于创建两列布局 */
+.anime-container {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+/* 设置每个动漫系列的宽度，使其占用一半宽度 */
+.anime-series {
+  width: 50%;
+  box-sizing: border-box; /* 防止边框和填充增加元素的实际宽度 */
+  padding: 20px; /* 添加一些填充，增加间距 */
+}
+
+/* 根据需要调整其他样式，确保两列布局的整齐性 */
+.anime-series a {
+  text-decoration: none;
+}
+
+.anime-series h3 {
+  font-size: 3em;
+}
+
+.anime-series p {
+  margin: 0;
+}
+
+.anime-series .my-link {
+  color: #ffffff;
+  border-bottom: 1px solid transparent;
+  transition: border-bottom 0.3s ease;
+}
+
+.anime-series .my-link:hover {
+  border-bottom: 1px solid #ffffff;
+}
+
+/* 添加一个新的类，用于创建两列布局 */
+.anime-container {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+/* 设置每个动漫系列的宽度，使其占用一半宽度 */
+.anime-series {
+  width: calc(50% - 20px); /* 50% 宽度减去间隙 */
+  box-sizing: border-box; /* 防止边框和填充增加元素的实际宽度 */
+  padding: 20px; /* 添加一些填充，增加间距 */
+  margin: 10px; /* 添加 margin 来实现间隙 */
+  background-color: #cbc9c9; /* 灰色背景 */
+  opacity: 0.8;
+}
+
+/* 根据需要调整其他样式，确保两列布局的整齐性 */
+.anime-series a {
+  text-decoration: none;
+}
+
+.anime-series h3 {
+  font-size: 2em;
+}
+
+.anime-series p {
+  margin: 0;
+  color: #2b2a2a;
+}
+
+.anime-series .my-link {
+  color: #ffffff;
+  border-bottom: 1px solid transparent;
+  transition: border-bottom 0.3s ease;
+}
+
+.anime-series .my-link:hover {
+  border-bottom: 1px solid #ffffff;
+}
+
+</style>
+<body background="images\acg01.png">
+    <div class="navbar">
+        <div class="nav">
+            <ul>
+                <li>
+                    <a href="home.html" style="color: rgb(0, 0, 0);">首页</a>
+                </li>
+                <li>
+                    <a href="" style="color: rgb(0, 0, 0);">番剧漫画</a>
+                    <ol>
+                        <li><a href="comic.html" style="color: rgb(0, 0, 0);">ACG</a></li>
+                    </ol>
+                </li>
+                <li>
+                    <a href="" style="color: rgb(0, 0, 0);">音乐推荐</a>
+                    <ol>
+                        <li><a href="English-music.html" style="color: rgb(0, 0, 0);">英文柔和风</a></li>
+                        <li><a href="Japan-music.html" style="color: rgb(0, 0, 0);">日系共鸣</a></li>
+                        <li><a href="Phonk-music.html" style="color: rgb(0, 0, 0);">Phonk</a></li>
+                    </ol>
+                </li>
+                <li>
+                    <a href="" style="color: rgb(0, 0, 0);">关于我</a>
+                    <ol>
+                        <li><a href="hobby.html" style="color: rgb(0, 0, 0);">个人爱好</a></li>
+                        <li><a href="collegeindt.html" style="color: rgb(0, 0, 0);">个人介绍</a></li>
+                     
+                    </ol>
+                </li>
+                <li>
+                    <a href="" style="color: rgb(0, 0, 0);">感悟心得</a>
+                    <ol>
+						<li><a href="test.html" style="color: rgb(0, 0, 0);">网站概述</a></li>
+                    </ol>
+                </li>
+                <li>
+                    <a href="cover.html" style="color: rgb(0, 0, 0);">回到封面</a>
+                </li>
+                <!-- 这个元素来定义滑动的线条 -->
+                <li class="underline"></li>
+            </ul>
+        </div>
+    </div>
+    <div class="logo">
+        <img src="images\marrydeer.png" alt="Logo"  width="30"  height="30">
+    </div>
+     <!-- 添加圆形图片 -->
+     <div class="profile-picture">
+        <a href="https://space.bilibili.com/356327544?spm_id_from=333.1007.0.0" style="color: white;"><img src="images\MU9)JFGOYF@@M2EMVB7DZ{6.png" alt="Profile Picture" style="width: 120%; height: 120%;"></a>
+    </div>
+    <br><br>
+    <!-- 在导航栏下方添加搜索框 -->
+<div class="search-box">
+  <a href="comic.html">
+    <button style="border-radius: 12px;">
+        <img src="images\acfun.png">
+        <span>番剧</span>
+    </button>
+    </a>
+    <button>
+        <img src="images\live.png">
+        <span>直播</span>
+    </button>
+    <a href="game.html">
+      <button>
+          <img src="images\game.png">
+          <span>游戏</span>
+      </button>
+  </a>
+    <button>
+        <img src="images\gaming.png">
+        <span>赛事</span>
+    </button>
+    <button>
+        <img src="images\music.png">
+        <span>音乐</span>
+    </button>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    <input type="text" placeholder="搜索...">
+    <button type="submit">
+        <img src="images\search.png">
+        <span>搜索</span>
+    </button>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    <button>
+        <img src="images\message.png">
+        <span>消息</span>
+    </button>
+    <button>
+        <img src="images\moving.png">
+        <span>动态</span>
+    </button>
+    <button>
+        <img src="images\history.png">
+        <span>历史</span>
+    </button>
+    <button>
+        <img src="images\trare.png">
+        <span>收藏</span>
+    </button>
+    <a href="list.html"><button style="background-color: pink;">
+        <img src="images\download.png">
+        <span>资源Download</span>
+    </button></a>
+</div>
+<!-- 在按钮模块下插入轮播图 -->
+<div class="swiper-container-wrapper">
+    <div class="swiper-container">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide"><img src="images\upd_00000.png" alt="Slider 1"></div>
+        <div class="swiper-slide"><img src="images\941d98f71edc06676a997628a3f91b84.jpg" alt="Slider 2"></div>
+        <div class="swiper-slide"><img src="images\QQ图片20231206233449.png" alt="Slider 3"></div>
+        <div class="swiper-slide"><img src="images\0d89d6911bdd87823ebcdbfb3512ad2a.jpg" alt="Slider 4"></div>
+        <div class="swiper-slide"><img src="images\QQ图片20231208163840.png" alt="Slider 5"></div>
+        <div class="swiper-slide"><img src="images\QQ图片20231208164015.png" alt="Slider 6"></div>
+        <div class="swiper-slide"><img src="images\QQ图片20231206232625.png" alt="Slider 7"></div>
+        <div class="swiper-slide"><img src="images\QQ图片20231208163847.png" alt="Slider 8"></div>
+        <!-- 添加更多轮播项，根据需要增加swiper-slide -->
+      </div>
+      <!-- 如果需要分页器 -->
+      <div class="swiper-pagination"></div>
+      <!-- 如果需要导航按钮 -->
+      <div class="swiper-button-next"></i></div>
+      <div class="swiper-button-prev"></i></div>
+    </div>
+  </div>
+<!-- 在Swiper容器后添加四个同行的模块 -->
+<div class="additional-modules">
+    <div class="module">
+      <h2>动画索引</h2>
+      <img src="images\suoyin_00000.png" style="opacity: 0.8;  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);">
+      <div class="text-overlay">
+        <p> <a href="#" class="link">追番人数</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <a href="#" class="link">更新时间</a><br><br>
+            <a href="#" class="link">最高评分</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <a href="#" class="link">播放数量</a></p>
+      </div>
+      <!-- 您的索引内容 -->
+    </div>
+    <div class="module">
+      <h2>类型风格</h2>
+      <img src="images\leixing_00000.png" style="opacity: 0.8;  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);">
+      <div class="text-overlay">
+        <p> <a href="#" class="link">原创</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <a href="#" class="link">小说改</a><br><br>
+            <a href="#" class="link">漫画改</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <a href="#" class="link">游戏改</a></p>
+      </div>
+      <!-- 您的风格内容 -->
+    </div>
+    <div class="module">
+      <h2>首播时间</h2>
+      <img src="images\timee_00000.png" style="opacity: 0.8;  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);">
+      <div class="text-overlay">
+        <p>  <a href="#" class="link">2023</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <a href="#" class="link">2022</a>&nbsp;&nbsp;&nbsp;<br><br>
+            <a href="#" class="link">2021</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <a href="#" class="link">2020...</a></p>
+      </div>
+      <!-- 您的时间内容 -->
+    </div>
+    <div class="module">
+      <h2>热播热搜</h2>
+      <img src="images\模块bg_00000.png" style="opacity: 0.8;    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);">
+      <div class="text-overlay">
+        <p style="color: rgb(0, 0, 0);"> <a href="#" class="black-text">咒术回战&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <br><br>
+            &nbsp;&nbsp;葬送的芙莉莲&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <br><br>
+            香格里拉边境</a></p>
+      </div>
+      
+      
+      
+      <!-- 您的热搜内容 -->
+    </div>
+    
+  </div>
+  <br><br><br><br><br><br>
+  <div id="content">
+    <h2>&nbsp;&nbsp;热门动漫系列</h2>
+  
+    <div class="anime-container">
+      <div class="anime-series">
+        <a href="https://www.bilibili.com/video/BV1bJ411i7Vj" class="my-link">
+          <h3>《JOJO的奇妙冒险--彪马野郎》</h3><br><br>
+          &nbsp;&nbsp;&nbsp;&nbsp;<img src="images\OIP.jpg" alt="漫画系列1">
+          <br><br>
+          </a>
+          <p>&nbsp;&nbsp;&nbsp;&nbsp;这是一部令人兴奋的动漫系列，故事情节引人入胜，角色设计精彩。欢迎加入这个奇妙的冒险！</p>
+          <br><br><p>&nbsp;&nbsp;&nbsp;&nbsp;JOJO的奇妙冒险 的第七部。 1890年，一场横断北美大陆、总长度六千公里的超长程赛马“STEEL BALL RUN”（SBR）即将展开，这是主角 乔尼·乔斯达 跨越青春期、迈向大人的故事。 乔尼‧乔斯达曾是顶尖骑手，但一起枪击案使他半身不遂，他遇见了神秘男子 杰洛·齐贝林 ，杰洛手中的旋转铁球让乔尼再一次站起，乔尼为了追寻让自己重新站起的方法，跟着杰洛参与了SBR。 表面上、SBR是由活动策划家 史蒂芬·史提尔 所组织的，但比赛的幕后主使其实是美国政府。 美国总统 法尼·瓦伦泰 为了搜集散落在北美大陆上的、不可思议的圣人遗体而筹画了这场大赛。 每一份圣人遗体──故事里暗示是耶稣的遗体──都能带给持有者替身能力，而完整的遗体更具神力，总统的目的便是取得完整遗体以确保美国的荣耀。 </p>
+        <!-- 第一个动漫系列的内容 -->
+      </div>
+      
+      <div class="anime-series">
+        <a href="https://www.bilibili.com/bangumi/play/ss24581?spm_id_from=333.337.0.0" class="my-link">
+          <h3>《碧蓝之海》</h3><br><br>
+          &nbsp;&nbsp;&nbsp;&nbsp;<img src="images\th.jpg" alt="动漫系列1"><br><br>
+          </a>
+          <p>&nbsp;&nbsp;&nbsp;&nbsp;如果你喜欢休闲和搞笑番，这部动漫系列将是你的不二选择。饭点慎看，笑到喷饭，绝对值得一看！</p>
+          <br><br><p>&nbsp;&nbsp;&nbsp;&nbsp;北原伊织升入大学后，开始寄住在伊豆的叔父所经营的潜水用具店“Grand Blue”。 传入耳中的波涛声、炽烈照射的太阳、开始一起生活的可爱表姐妹……青春的大学生活！ 这样的伊织所面临的却是——除了野球拳以外的猜拳一概不知的强壮男人们！ ！ ...
+  
+          </p>
+        <!-- 第二个动漫系列的内容 -->
+      </div>
+      
+      <div class="anime-series">
+        <a href="https://www.bilibili.com/bangumi/play/ss2576?spm_id_from=333.337.0.0" class="my-link">
+          <h3>《OVERLORD》</h3><br><br>
+          &nbsp;&nbsp;&nbsp;&nbsp;<img src="images\th (1).jpg" alt="动漫系列2"><br><br>
+            
+          </a>
+          <p>&nbsp;&nbsp;&nbsp;&nbsp;这是一部异世界爽文，满级大佬运营被遗弃的团队，异世界创造神话。</p>
+          <br><br><p>&nbsp;&nbsp;&nbsp;&nbsp;某天，一款掀起大热潮的VRMMORPG「YGGDRASIL」原本会停止一切服务，但即使过了结束时间，玩家也不会退出游戏，NPC也有了各自的思想。现实世界中喜爱电玩的主人公铃木悟（真名）在等待系统强制登出时，与“安兹·乌尔·恭”公会的成员意外穿越到了异世界，并且自己还变成了拥有骷髅外表的最强魔法师——“飞鼠”。就这样，真正的奇幻传说正式拉开帷幕。</p>
+        <!-- 第三个动漫系列的内容 -->
+      </div>
+      
+      <div class="anime-series">
+        <a href="https://www.bilibili.com/bangumi/play/ss1650?spm_id_from=333.337.0.0" class="my-link">
+          <h3>《Fate--Zero》</h3><br><br>
+          &nbsp;&nbsp;&nbsp;&nbsp;<img src="images\OIP-C (2).jpg" alt="动漫系列3"><br><br>
+            
+          </a>
+          <p>&nbsp;&nbsp;&nbsp;&nbsp;这是一部热血战斗番，圣杯战争与英灵召唤，宝具解放战斗触目惊心！。</p>
+          <br><br><p>&nbsp;&nbsp;&nbsp;&nbsp;《Fate/Zero》讲述的是第四次圣杯战争时的故事。 围绕着实现所有“ 奇迹 ”的“圣杯”的力量，七位魔术师召唤七位英灵争夺冠军的终极决斗剧 圣杯战争 。 在大受欢迎的游戏《Fate／stay night》中只是片断地讲述的前一天谭《第四次圣杯战争》的 真相全部 。</p>
+        <!-- 第四个动漫系列的内容 -->
+      </div>
+
+      <div class="anime-series">
+        <a href="https://www.bilibili.com/bangumi/play/ep98615?spm_id_from=333.337.0.0&from_spmid=666.25.episode.0" class="my-link">
+          <h3>《珈百璃的堕落》</h3><br><br>
+          &nbsp;&nbsp;&nbsp;&nbsp;<img src="images\OIP-C (5).jpg" alt="动漫系列5"><br><br>
+          </a>
+          <p>&nbsp;&nbsp;&nbsp;&nbsp;这是一部日常休闲番。</p>
+          <br><br><p>&nbsp;&nbsp;&nbsp;&nbsp;天使学校的首席天使来到了地球！ ……但是，住惯了地球的她，开始过起整天逃学打网游的自甘堕落生活。化身为怠惰的废柴天使，简称“废天使”的加百列，早就把让全部人类幸福的目标抛到九霄云外，并发誓要充分享受娱乐——。</p>
+        <!-- 第五个动漫系列的内容 -->
+      </div>
+
+      <div class="anime-series">
+        <a href="https://ddys.pro/shingeki/" class="my-link">
+          <h3>《进击的巨人》</h3><br><br>
+          &nbsp;&nbsp;&nbsp;&nbsp;<img src="images\OIP-C (6).jpg" alt="动漫系列6"><br><br>
+          </a>
+          <p>&nbsp;&nbsp;&nbsp;&nbsp;这是一部战斗番，唯一真神！巨人之力的传承，对自由的追逐，对结局的释怀。</p>
+          <br><br><p>&nbsp;&nbsp;&nbsp;&nbsp;107年前（743年），世界上突然出现了人类的天敌“巨人”。 面临着生存危机而残存下来的人类逃到了一个地方，盖起了三重巨大的城墙。 人们在这隔绝的环境里享受了一百多年的和平，直到艾伦·耶格尔十岁那年，60米高的“超大型巨人”突然出现，以压倒性的力量破坏城门，其后瞬间消失，凶残的巨人们成群的冲进墙内捕食人类。</p>
+        <!-- 第六个动漫系列的内容 -->
+      </div>
+
+      <div class="anime-series">
+        <a href="https://ddys.pro/record-of-ragnarok/" class="my-link">
+          <h3>《Fate--Zero》</h3><br><br>
+          &nbsp;&nbsp;&nbsp;&nbsp;<img src="images\OIP-C (7).jpg" alt="动漫系列7"><br><br>
+          </a>
+          <p>&nbsp;&nbsp;&nbsp;&nbsp;这是一部冷门热血战斗番，神与人之战，生存之战，谁言人族无大帝。</p>
+          <br><br><p>&nbsp;&nbsp;&nbsp;&nbsp;现在，持续700万年的人类历史即将落下帷幕——
+            每1000年举办一次，全世界的神明众聚一堂，在天界召开“人类存亡会议”。
+            由于人类所犯下的愚蠢行径，就在全体神明一致下达“终结”这一审判的时候，半神半人的战乙女“女武神”之一布伦希尔德提出了异议。
+            “单纯的毁灭是不具美感的。要不要试着给人类一次机会？”
+            她所提出的是神vs人类最终斗争，俗称“诸神黄昏”。也就是，全世界的神明与从全人类历史上选出来的人类代表们进行一对一的单挑比赛。一共13场比赛，先拿下7场胜利的一方获胜。
+            然而，人类是绝对不可能战胜神明的。在众神的一片嘲笑声中，布伦希尔德挑衅道：
+            “难道各位是在害怕吗？”
+            这句话触及了神明的逆鳞，就在众神都非常愤怒的状态下，他们答应了诸神黄昏的决斗。于是，布伦希尔德等人从700万年的人类史中选出最强的13人来进行诸神黄昏的决斗。
+            人类是否能够超越神明，阻止这场末日？
+            波浪怒涛的生死对决”诸神黄昏“，就此开幕！</p>
+        <!-- 第七个动漫系列的内容 -->
+      </div>
+
+      <div class="anime-series">
+        <a href="https://www.bilibili.com/bangumi/play/ss1650?spm_id_from=333.337.0.0" class="my-link">
+          <h3>《Fate--Zero》</h3><br><br>
+          &nbsp;&nbsp;&nbsp;&nbsp;<img src="images\OIP-C (2).jpg" alt="动漫系列3"><br><br>
+          </a>
+          <p>&nbsp;&nbsp;&nbsp;&nbsp;这是一部热血战斗番，圣杯战争与英灵召唤，宝具解放战斗触目惊心！。</p>
+          <br><br><p>&nbsp;&nbsp;&nbsp;&nbsp;《Fate/Zero》讲述的是第四次圣杯战争时的故事。 围绕着实现所有“ 奇迹 ”的“圣杯”的力量，七位魔术师召唤七位英灵争夺冠军的终极决斗剧 圣杯战争 。 在大受欢迎的游戏《Fate／stay night》中只是片断地讲述的前一天谭《第四次圣杯战争》的 真相全部 。</p>
+        <!-- 第四个动漫系列的内容 -->
+      </div>
+
+      <div class="anime-series">
+        <a href="https://www.bilibili.com/bangumi/play/ss1650?spm_id_from=333.337.0.0" class="my-link">
+          <h3>《Fate--Zero》</h3><br><br>
+          &nbsp;&nbsp;&nbsp;&nbsp;<img src="images\OIP-C (2).jpg" alt="动漫系列3"><br><br>
+          </a>
+          <p>&nbsp;&nbsp;&nbsp;&nbsp;这是一部热血战斗番，圣杯战争与英灵召唤，宝具解放战斗触目惊心！。</p>
+          <br><br><p>&nbsp;&nbsp;&nbsp;&nbsp;《Fate/Zero》讲述的是第四次圣杯战争时的故事。 围绕着实现所有“ 奇迹 ”的“圣杯”的力量，七位魔术师召唤七位英灵争夺冠军的终极决斗剧 圣杯战争 。 在大受欢迎的游戏《Fate／stay night》中只是片断地讲述的前一天谭《第四次圣杯战争》的 真相全部 。</p>
+        <!-- 第四个动漫系列的内容 -->
+      </div>
+    </div>
+    
+    <!-- 添加更多动漫系列的块，复制上面的结构并修改图片链接、标题和介绍 -->
+  </div>
+       <div align="right">
+         <button class="button" onclick="refreshPage()">
+            <img src="images\refesh.png" alt="Custom Icon">
+            <span>刷新</span>
+        </button>
+    </div>
+    <br>
+    <div align="right">
+        <button class="button">
+            <img src="G:\web期末\images\worker.png" alt="Custom Icon">
+            <span>客服</span>
+        </button>
+    </div>
+    <br>
+        <div align="right">
+        <button class="button">
+            <img src="images\more.png" alt="Custom Icon">
+            <span>更多</span>
+        </button>
+    </div>
+    <script>
+        // 刷新页面的 JavaScript 函数
+        function refreshPage() {
+            location.reload(); // 刷新页面
+        }
+          // 初始化Swiper
+    var swiper = new Swiper('.swiper-container', {
+      slidesPerView: 1,
+      spaceBetween: 10,
+      navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+      },
+      pagination: {
+        el: '.swiper-pagination',
+        clickable: true,
+      },
+      loop: false, // 循环播放
+    });
+    
+    </script>
+</body>
+</html>

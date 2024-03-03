@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="css/nav.css">
+    <link rel="stylesheet" href="css/style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>我的网站概述</title>
+    <style>
+        body {
+            font-family: '微软雅黑', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f0f0f0;
+            color: #333;
+        }
+        header {
+            color: #000000;
+            padding: 40px;
+            text-align: center;
+        }
+      
+
+        nav {
+            background-color: #333;
+            color: #fff;
+            padding: 10px;
+            text-align: center;
+        }
+
+        nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        nav li {
+            display: inline;
+            margin-right: 10px;
+        }
+
+        nav a {
+            text-decoration: none; /* 去除下划线 */
+            color: #fff; /* 设置文字颜色为白色 */
+        }
+
+        section {
+            padding: 20px;
+        }
+
+        article {
+            margin-bottom: 20px;
+        }
+        footer {
+            color: #000000;
+            padding: 20px;
+            text-align: center;
+        }
+        .logo {
+            position: relative;
+            /* 设置相对定位，使得后续的top、bottom、left、right属性相对于其生效 */
+        }
+
+        .logo img {
+            width: 30px;
+            height: 30px;
+            position: absolute;
+            /* 设置绝对定位，使得可以通过top、bottom、left、right属性来调整位置 */
+            top: -140px; /* 上边距离上方50px */
+            left: 0px; /* 左边距离左侧20px */
+        }
+
+        /* 根据需要添加更多样式 */
+
+    </style>
+</head>
+<body background="images\introduction_00000.png">
+  
+    <header>
+        <h1>欢迎来到我的网站</h1>
+        <p>您的精彩内容的首选目的地。</p>
+    </header>
+    <div class="navbar">
+      <div class="nav">
+          <ul>
+              <li>
+                  <a href="home.html" style="color: rgb(0, 0, 0);">首页</a>
+              </li>
+              <li>
+                  <a href="" style="color: rgb(0, 0, 0);">番剧漫画</a>
+                  <ol>
+                      <li><a href="comic.html" style="color: rgb(0, 0, 0);">ACG</a></li>
+                  </ol>
+              </li>
+              <li>
+                  <a href="" style="color: rgb(0, 0, 0);">音乐推荐</a>
+                  <ol>
+                      <li><a href="English-music.html" style="color: rgb(0, 0, 0);">英文柔和风</a></li>
+                      <li><a href="Japan-music.html" style="color: rgb(0, 0, 0);">日系共鸣</a></li>
+                      <li><a href="Phonk-music.html" style="color: rgb(0, 0, 0);">Phonk</a></li>
+                  </ol>
+              </li>
+              <li>
+                  <a href="" style="color: rgb(0, 0, 0);">关于我</a>
+                  <ol>
+                      <li><a href="hobby.html" style="color: rgb(0, 0, 0);">个人爱好</a></li>
+                      <li><a href="collegeindt.html" style="color: rgb(0, 0, 0);">大学介绍</a></li>
+ 
+                  </ol>
+              </li>
+              <li>
+                  <a href="" style="color: rgb(0, 0, 0);">感悟心得</a>
+                  <ol>
+          <li><a href="test.html" style="color: rgb(0, 0, 0);">网站概述</a></li>
+                  </ol>
+              </li>
+              <li>
+                  <a href="cover.html" style="color: rgb(0, 0, 0);">回到封面</a>
+              </li>
+              <!-- 这个元素来定义滑动的线条 -->
+              <li class="underline"></li>
+          </ul>
+      </div>
+  </div>
+  <div class="logo">
+    <img src="images\marrydeer.png" alt="Logo"  width="30"  height="30">
+</div>
+<div class="profile-picture">
+  <a href="https://space.bilibili.com/356327544?spm_id_from=333.1007.0.0" style="color: white;"><img src="images\MU9)JFGOYF@@M2EMVB7DZ{6.png" alt="Profile Picture" style="width: 120%; height: 120%;"></a>
+</div>
+    <nav>
+        <ul>
+            <li><a href="#home">首页</a></li>
+            <li><a href="#about">关于我</a></li>
+            <li><a href="#services">网页服务</a></li>
+            <li><a href="#contact">联系我</a></li>
+        </ul>
+    </nav>
+
+    <section id="home">
+        <article>
+            <h2>技术概述</h2>
+            <p>使用HTML和CSS构建，通过<meta>标签设置字符集和响应式设计。页面包含导航栏、LOGO、带有放大效果的图标，以及登录按钮。底部有刷新、客服和更多功能按钮。使用CSS调整元素样式，包括按钮样式、图片居中和悬停效果。通过JavaScript实现刷新页面功能。整体设计简洁，注重用户体验，展示了对HTML、CSS和JavaScript的综合运用。</p>
+        </article>
+
+        <article>
+            <h2>关于我</h2>
+            <p>我是一名大二学生，目前学习了C语言，Java，web，制作该网页是完成web的期末项目作业。</p>
+        </article>
+
+        <article>
+            <h2>网页服务</h2>
+            <p>介绍热门动漫，推荐歌曲，推荐游戏，提供丰富的资源素材等。</p>
+        </article>
+    </section>
+
+    <section id="contact">
+        <article>
+            <h2>联系我</h2>
+            <p>qq：2792011928  &nbsp;&nbsp;&nbsp; bilibili-ID：栗悟饭与龟波功_Kurisu</p>
+        </article>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 栗悟饭与龟波功_Kurisu</p>
+    </footer>
+
+</body>
+</html>
