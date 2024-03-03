@@ -1,0 +1,69 @@
+body{
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	background-size: 100% 100%;
+  }
+
+.box{/*设置一个大的div存放所需要的全部图片*/
+	width:1000px;
+	height:340px;
+	border-radius: 15px; 
+    border-color: rgba(255,255,255,0.11);
+	overflow:hidden;
+	background-color:rgba(255,255,255,0.3);
+	box-shadow:5px 5px 7px rgba(255,255,255,0.5);
+    background-size: contain;
+    margin-top: 200px;
+    margin-left: auto;
+    margin-right: auto;/*设置居中效果*/
+}
+.box li{
+	float:left;/*设置每张图片存放的空间*/
+	position:relative;
+	width:200px;
+	height:370px;
+	box-shadow:0 0 25px #000000;
+	transition:all 0.5s;
+    background-size: contain;
+}
+.box li img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}/*将图片适应div大小，很关键，这样就避免了图片大小不合适的问题*/
+.box li .text{/*设置动画效果*/
+	position:absolute;
+	left:0;
+	bottom:0;
+	font-size:16px;
+	color:#FFF;
+	width:100%;
+	height:60px;
+	text-align:center;
+	line-height:30px;
+	background:#000;
+	background-color:rgba(0,0,0,0.7);
+}
+.box:hover li{
+	width:125px;
+}
+.box li:hover{
+	width:500px;
+}
+.bottom {
+    margin-top: 50px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100px;
+    height: 50px;
+    border-radius: 15px;
+    border-color: rgba(255,255,255,0.5);/*前三个数值是红绿蓝三种颜色的值，最后一个是透明度*/
+	box-shadow: 0px 0px 12px #ffffff;
+	text-shadow: 0px 0px 12px #ffffff;
+	transition: all 0.5s;
+}
+.bottom:hover{
+	background-color: rgba(255, 255, 255, 0.4);
+    box-shadow: 0px 0px 25px #ffffff;
+    transition: all 0.5s;
+}

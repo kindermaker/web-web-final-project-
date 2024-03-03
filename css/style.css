@@ -1,0 +1,409 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: "Poppins", sans-serif;
+}
+
+/*body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #16384c;
+}*/
+
+.container{
+    position: relative;
+    height: 520px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 20px;
+    margin-top: 158px;
+    transform: scale(0.9);
+    
+}
+
+.container .card {
+    margin-top: 50px;
+    position: relative;
+    max-width: 280px;
+    height: 213px;
+    background: rgba(255, 255, 255, 0.6); /* 使用 rgba 表示法，透明度设置为 0.6 */
+    margin: 30px 10px;
+    padding: 20px 30px;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 5px 202px rgba(0, 0, 0, 0.5);
+    transition: .3s ease-in-out;
+}
+
+
+.container .card img {
+    max-width: 100%;
+    height: auto;
+    transition: .3s ease-in-out;
+}
+
+.container .card:hover{
+    height: 450px;
+}
+
+.container .card .imgBx{
+    position: relative;
+    width: 260px;
+    height: 150px;
+    top: -60px;
+    left: 15px;
+    z-index: 1;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.2);
+    overflow: hidden; 
+}
+
+.container .card .imgBx img{
+    max-width: 100%;
+    border-radius: 4px;
+}
+
+.container .card .content{
+    position: relative;
+    margin-top: -140px;
+    padding: 10px 15px;
+    text-align: center;
+    color: #111;
+    visibility: hidden;
+    opacity: 0;
+    transition: .3s ease-in-out;
+}
+
+.container .card:hover .content {
+    visibility: visible;
+    opacity: 1;
+    margin-top: 0; 
+    transition-delay: .3s;
+}
+
+body {
+    /* ... 其他样式 ... */
+    background-size: 115%; 
+    background-position: center top -80px; /* 背景图居中横向，顶部纵向 */
+    background-repeat: no-repeat; /* 禁止背景图重复 */
+    background-attachment: fixed;
+    margin: 0;
+    overflow: visible; /* 隐藏页面溢出的部分，以便雨滴不会出现在页面之外 */
+}
+#intro-section {
+    background-color: rgba(100, 100, 100, 0.6); /* 灰白色背景，60%不透明度 */
+    width: 100%;
+    padding: 20px;
+    text-align: center;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 50vh; /* 调整高度，根据需要修改 */
+    margin-top: 25vh; 
+}
+
+/* 样式化按钮 */
+#beginButton {
+    background-color: #585858;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+}
+
+
+.rain-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-image: url('your-background-image.jpg'); /* 替换为你的背景图 */
+    background-size: cover;
+    background-position: center;
+    overflow: hidden;
+}
+
+.raindrop {
+    position: absolute;
+    width: 2px;
+    height: 10px;
+    background-color: rgb(255, 255, 255); /* 雨滴颜色 */
+    animation: fall linear infinite;
+}
+
+@keyframes fall {
+    to {
+        transform: translateY(100vh);
+    }
+}
+
+
+    button {
+        text-shadow: 0 0 10px #ffffff;
+      }
+      
+
+ /* 添加用户样式 */
+
+.user-info-container {
+    position: relative;
+}
+
+.user-info {
+    display: none;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    padding: 10px;
+    border-radius: 4px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.user-info img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+}
+
+.login-container {
+    display: block;
+}
+
+/* 添加用户登录按钮的样式 */
+#loginButton {
+    cursor: pointer;
+    padding: 5px 10px;
+    font-size: 14px;
+    border: none;
+    background-color: #3498db;
+    color: #fff;
+    border-radius: 4px;
+}
+
+.login-container {
+    position: fixed;
+    top: 10px;
+    right: 10px;
+    z-index: 999;
+}
+
+#loginButton {
+    background-color: #3498db;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+}
+
+#loginButton:hover {
+    background-color: #2980b9;
+}
+
+     /* 样式用于实现圆形图片和悬停效果 */
+     .profile-picture {
+        width: 40px; /* 调整图片宽度 */
+        height: 40px; /* 调整图片高度 */
+        border-radius: 50%; /* 将图片变成圆形 */
+        overflow: hidden; /* 隐藏超出边界的部分 */
+        position: fixed;
+        top: 0px;
+        right: 20px;
+        transition: transform 0.3s; /* 添加过渡效果 */
+    }
+
+    .profile-picture:hover {
+        transform: scale(1.5); /* 悬停时放大1.5倍 */
+    }
+    .profile-container {
+        position: fixed;
+        top: 10px;
+        right: 10px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    /* 搜索框样式 */
+.search-box {
+    margin-top: -30px; /* 适当的间距，根据你的设计调整 */
+    text-align: center;
+}
+
+/* 输入框样式 */
+.search-box input {
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+/* 按钮样式 */
+.search-box button {
+    padding: 8px 12px;
+    border: none;
+    background-color: #ffffff; /* 你可以根据你的设计选择颜色 */
+    color: rgb(0, 0, 0);
+    border-radius: 4px;
+    cursor: pointer;
+    align-items: center;
+    transition: box-shadow 0.3s ease, transform 0.3s ease; /* 添加过渡效果 */
+}
+.search-box button:hover {
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3); /* 鼠标悬停时增加阴影深度 */
+}
+
+/* 按钮样式 */
+.button {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px;
+    border: none;
+    border-radius: 10px;
+    background-color: #ffffff; /* 根据需要选择颜色 */
+    color: rgb(0, 0, 0);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* 阴影效果 */
+    cursor: pointer;
+    transition: box-shadow 0.3s ease, transform 0.3s ease; /* 添加过渡效果 */
+}
+
+/* 图标样式 */
+.button i {
+    font-size: 24px;
+    margin-bottom: 5px;
+}
+.button img {
+    width: 24px; /* 适当调整图标的大小 */
+    height: 24px;
+    margin-bottom: 5px;
+}
+.button:hover {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* 鼠标悬停时增加阴影深度 */
+}
+.search-box img {
+    width: 24px; /* 适当调整图标的大小 */
+    height: 24px;
+    margin-bottom: 5px;
+    margin-top: 5px;
+}
+.logo {
+    margin-top: 5px;
+    margin-left: 25px;
+}
+.swiper-container-wrapper {
+    overflow: hidden; /* 避免内容溢出 */
+  }
+
+  .swiper-container {
+    margin-top: 5px;
+    width: 100%;
+    height: 300px !important;
+  }
+
+  .swiper-slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* 保持图片比例并填充整个轮播项 */
+  }
+   /* 调整分页器的位置 */
+   .swiper-pagination {
+    position: absolute;
+    bottom: 340px!important; /* 调整到轮播图底部的距离 */
+    left: 50%;
+    transform: translateX(-50%);
+    color: #fff;
+  }
+
+  /* 调整导航按钮的位置 */
+  .swiper-button-next, .swiper-button-prev {
+    position: absolute;
+    top: 54%  !important;
+    transform: translateY(-50%);
+    width: 30px; /* 调整按钮宽度 */
+    height: 30px;/* 调整按钮高度 */
+    background-color: transparent; /* 调整按钮背景颜色 */
+    color: #fff !important; 
+
+
+  }
+
+  .swiper-button-next {
+    right: 600px !important; /* 调整到轮播图右侧的距离 */
+  }
+
+  .swiper-button-prev {
+    left: 600px !important; /* 调整到轮播图左侧的距离 */
+  }
+  .additional-modules {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+  }
+
+  .module {
+    flex: 1;
+    background-color: #f0f0f0;
+    padding: 10px;
+    text-align: center;
+    margin-right: 10px; 
+    position: relative;
+  }
+  .image-with-text {
+    display: block;
+    width: 100%; /* 使图片充满父容器 */
+    height: auto;
+    
+    transition: transform 0.3s, box-shadow 0.3s;
+ 
+  }
+  
+  .text-overlay {
+    position: absolute;
+    top: 50%; /* 使文本垂直居中 */
+    left: 50%; /* 使文本水平居中 */
+    transform: translate(-50%, -50%); /* 居中文本 */
+    color: rgb(81, 81, 81); /* 文本颜色 */
+    text-align: center;
+  }
+  
+  .text-overlay p {
+    margin: 0; /* 清除默认的段落边距 */
+  }
+  .image-with-text:hover {
+    transform: scale(1.1); /* 鼠标悬停时稍微放大图片 */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2); /* 悬停时放大阴影效果，可以根据需要调整阴影的大小和颜色 */
+  }
+  .link {
+    color: inherit; /* 继承父元素的文本颜色 */
+    text-decoration: none; /* 消除下划线 */
+    transition: color 0.3s; /* 添加过渡效果 */
+  }
+  
+  .link:hover {
+    color: rgb(26, 26, 26); /* 鼠标悬停时变为白色 */
+  }
+
+/* 添加游戏模块的样式 */
+.game-content {
+    position: relative;
+    background-color: white;
+    border-radius: 12px;
+    padding: 8px;
+    height: 100%;
+    overflow: hidden; /* 隐藏溢出的内容 */
+}
+
+.game-content img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    border-radius: 12px; /* 圆角矩形，根据需要调整半径 */
+}
+

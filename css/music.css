@@ -1,0 +1,45 @@
+/* music.css */
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f0f0;
+  }
+  
+  .container {
+    max-width: 1200px;
+    margin: 20px auto;
+    padding: 0 20px;
+  }
+  
+  .row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+  
+  .col {
+    flex: 1 1 calc(25% - 20px);
+    margin: 0;
+  }
+  
+  .module {
+    background-color: rgba(169, 169, 169, 0.6);
+    padding: 20px;
+    text-align: center;
+    border-radius: 8px; /* 添加圆角 */
+  }
+  
+  img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin-bottom: 10px; /* 添加图片下方间距 */
+  }
+  
+  p {
+    margin: 0;
+    color: #333;
+  }
+  

@@ -1,0 +1,129 @@
+* {
+	/* 页面初始化 清除元素的内外边距 */
+	padding: 0;
+	margin: 0;
+}
+body {
+	/* 宽度占浏览器可视区域的高度 */
+	width: 100vm;
+	background-color: #ffffff;
+}
+li {
+	/* 清除li元素前面的项目符号 */
+	list-style: none;
+}
+a {
+	/* 清除a元素的下划线 */
+	text-decoration: none;
+	color: rgb(0, 0, 0);
+}
+.navbar {
+	width: 100%;
+	height: 45px;
+	/*background-color: rgba(200,240,255,0.6);*/
+	/* 盒子阴影 */
+	box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+	top: 0; /*在最顶上*/
+	position: fixed;
+}
+.navbar .nav {
+	width: 1200px;
+	height: 100%;
+	/* 让元素自动水平居中 */
+	margin: 0 auto;
+	
+}
+.navbar .nav ul {
+	
+	/* 相对定位 */
+	position: relative;
+	/* 弹性布局 */
+	display: flex;
+	/* 让子元素平均分配宽度 */
+	justify-content: space-around;
+	width: 100%;
+	height: 100%;
+}
+.navbar .nav ul > li {
+	width: 100%;
+	height: 100%;
+}
+.navbar .nav ul > li > a {
+	/* 因为a元素是行内元素 必须将其转为行内块或者块级才能设置宽度和高度 */
+	display: block;
+	width: 100%;
+	height: 100%;
+	line-height: 35px;
+	text-align: center;
+}
+.navbar .nav ul > li ol {
+	width: 100%;
+	background-color: rgba(255, 255, 255,0.1);
+	box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
+	/* 让盒子先沿着y轴缩放到0 也就是隐藏了 */
+	transform: scaleY(0);
+	/* 我们需要将盒子从上面滑动下来 设置一下缩放的中心点即可 设置到最上面的中间位置 */
+	transform-origin: 50% 0;
+	/* 设置过渡 */
+	transition: all 0.6s;
+}
+.navbar .nav ul > li ol li {
+	height: 35px;
+	border-bottom: 1px solid rgba(245, 245, 245,0);
+	/*这一步设置的二级导航的底部线条颜色以及二级导航的高度*/
+}
+.navbar .nav ul > li ol li a {
+	display: block;
+	width: 100%;
+	height: 100%;
+	line-height: 35px;
+	text-align: center;/*设置二级导航的文本效果*/
+}
+.navbar .nav ul > li ol li:hover {
+	background-color: rgba(0, 0, 0, 0.03);/*这一步设置二级导航的触碰的颜色效果*/
+}
+.navbar .nav ul > li:hover ol {
+	transform: scaleY(1);
+}
+/* 现在可以设置线条了 */
+.navbar .nav ul .underline {
+	/* 绝对定位 */
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	width: 200px;
+	height: 2px;
+	/* 设置一下盒子的左上角和右上角的圆角 */
+	border-top-left-radius: 6px;
+	border-top-right-radius: 6px;
+	background-color: rgba(0, 0, 0, 0.5);
+	/* 加过渡 */
+	transition: all 0.5s;
+	pointer-events: none;
+}
+
+.navbar .nav ul > li:nth-child(2):hover ~ .underline {
+	left: 200px;
+}
+/* 重复以上操作 */
+.navbar .nav ul > li:nth-child(3):hover ~ .underline {
+	left: 400px;
+	
+}
+.navbar .nav ul > li:nth-child(4):hover ~ .underline {
+	left: 600px;
+
+}
+.navbar .nav ul > li:nth-child(5):hover ~ .underline {
+	left: 800px;
+	
+}
+.navbar .nav ul > li:nth-child(6):hover ~ .underline {
+	left: 1000px;
+
+}
+body, html {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}

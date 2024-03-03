@@ -1,0 +1,129 @@
+
+#user_center{
+    width: 300px;
+    height: 560px;
+    border-radius: 10px;
+    background-color: white;
+    position: absolute;
+    top: 10px;
+    left: 55.65%;
+    display: none;
+    transition: display 0.2s;
+    border: #EEEEEE 1px solid;
+    z-index: 6;
+}
+.user_center_name{
+    font-size: 17px;
+    font-weight: 500;
+    width: 120px;
+    margin-right: auto;
+    margin-left: auto;
+    margin-top: 40px;
+}
+.user_center_name a{
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+}
+.user_center_name a:hover{
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+}
+.coins{
+    font-size: 0.6em;
+    width: 115px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 4px;
+    color: grey;
+}
+.numbers{
+    margin-right: 10px;
+    color: rgb(255, 255, 255);
+}
+.level{
+    margin-left: auto;
+    margin-right: auto;
+    width: 83%;
+    margin-top: 5px;
+}
+.level_left,.level_right,.level_number{
+    display: inline-block;
+}
+.level_number{
+    width: 170px;
+    height: 6px;
+    margin-bottom: 5px;
+}
+.level_left{
+    background-color: #7BCDEF;
+    border-radius: 3px;
+    font-size: 0.6em;
+    padding: 0px 5px;
+    color: white;
+    font-weight: 500;
+}
+.level_right{
+    background-color: #C9CCD0;
+    border-radius: 3px;
+    font-size: 0.6em;
+    padding: 1px 5px;
+    color: white;
+    font-weight: 500;
+}
+.level_infor{
+    margin-left: 24px;
+    margin-top: 5px;
+    font-size: 0.6em;
+    color: #D3D6D9;
+}
+.user_infor{
+    margin-left: 50px;
+    margin-top: 20px;
+}
+.myfocus_numbers{
+    width: 75px;
+    margin-left: 6px;
+    font-size: 17px;
+    color: rgb(255, 253, 253);
+    text-decoration: none;
+    display: inline-block;
+}
+.myfocus_numbers:hover{
+    text-decoration: none;
+    color: #00AEFD;
+}
+.user_infor_line2{
+    margin-top: 5px;
+}
+.myfocus{
+    width: 80px;
+    font-size: 14px;
+    color: grey;
+    text-decoration: none;
+    display: inline-block;
+    margin-bottom: 20px;
+}
+.myfocus:hover{
+    text-decoration: none;
+    color: #00AEFD;
+}
+.user_infor_item{
+    margin-left: auto;
+    margin-right: auto;
+    width: 85%;
+    border-radius: 5px;
+    height: 44px;
+}
+.user_infor_item:hover{
+    background-color: #E3E3E3;
+}
+.user_infor_item .icon{
+    margin-left: 20px;
+    height: 20px;
+    width: 20px;
+}
+.user_infor_item span{
+    line-height: 42px;
+    margin-left: 10px;
+    font-size: 0.9em;
+}
